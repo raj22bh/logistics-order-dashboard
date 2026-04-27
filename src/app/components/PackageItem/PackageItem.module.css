@@ -1,9 +1,9 @@
 .package {
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-lg);
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   overflow: hidden;
-  transition: border-color var(--transition-fast);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
   animation: slideIn var(--transition-slow) ease;
 }
 
@@ -20,6 +20,7 @@
 
 .package:hover {
   border-color: var(--border-secondary);
+  box-shadow: var(--shadow-sm);
 }
 
 .packageHeader {
@@ -27,14 +28,14 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-3) var(--space-4);
-  background: var(--bg-card);
+  background: #fafafa;
   cursor: pointer;
   user-select: none;
   transition: background var(--transition-fast);
 }
 
 .packageHeader:hover {
-  background: var(--bg-card-hover);
+  background: #f0f0f0;
 }
 
 .headerLeft {
@@ -50,15 +51,15 @@
   width: 24px;
   height: 24px;
   border-radius: var(--radius-sm);
-  background: var(--accent-blue-subtle);
-  color: var(--accent-blue);
+  background: var(--accent-blue);
+  color: #ffffff;
   font-size: var(--fs-xs);
   font-weight: var(--fw-bold);
 }
 
 .packageLabel {
   font-size: var(--fs-md);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
   color: var(--text-primary);
 }
 
@@ -127,8 +128,8 @@
 .dimLabel {
   grid-column: 1 / -1;
   font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--text-secondary);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: calc(-1 * var(--space-1));

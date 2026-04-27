@@ -8,6 +8,7 @@
   background: var(--bg-card);
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
   max-height: calc(100vh - var(--space-12));
   overflow-y: auto;
 }
@@ -17,7 +18,7 @@
   align-items: center;
   justify-content: space-between;
   padding-bottom: var(--space-4);
-  border-bottom: 1px solid var(--border-primary);
+  border-bottom: 2px solid #1a1a1a;
 }
 
 .previewTitle {
@@ -33,7 +34,7 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+  background: var(--accent-blue);
   color: white;
   font-size: var(--fs-lg);
 }
@@ -50,10 +51,10 @@
   gap: var(--space-1);
   padding: var(--space-1) var(--space-2);
   border-radius: var(--radius-full);
-  background: var(--accent-green-subtle);
+  background: var(--accent-blue-subtle);
   font-size: var(--fs-xs);
   font-weight: var(--fw-semibold);
-  color: var(--accent-green);
+  color: var(--accent-blue);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -62,7 +63,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--accent-green);
+  background: var(--accent-blue);
   animation: pulse 2s ease-in-out infinite;
 }
 
@@ -86,7 +87,7 @@
 
 .orderInfoLabel {
   font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -94,7 +95,7 @@
 
 .orderInfoValue {
   font-size: var(--fs-md);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   color: var(--text-primary);
   font-family: var(--font-mono);
 }
@@ -110,13 +111,13 @@
 }
 
 .badgeStandard {
-  background: var(--accent-blue-subtle);
-  color: var(--accent-blue);
+  background: var(--accent-blue);
+  color: #ffffff;
 }
 
 .badgeExpress {
-  background: var(--accent-orange-subtle);
-  color: var(--accent-orange);
+  background: #1a1a1a;
+  color: #ffffff;
 }
 
 /* ─── Route Section (Sender → Receiver) ─── */
@@ -128,7 +129,7 @@
 
 .routeLabel {
   font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -147,23 +148,23 @@
   gap: var(--space-1);
   padding: var(--space-3);
   border-radius: var(--radius-md);
-  background: var(--bg-secondary);
+  background: #fafafa;
   border: 1px solid var(--border-primary);
 }
 
 .routePartyLabel {
   font-size: var(--fs-xs);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   text-transform: uppercase;
   letter-spacing: 0.04em;
 }
 
 .routePartyLabelFrom {
-  color: var(--accent-teal);
+  color: var(--accent-blue);
 }
 
 .routePartyLabelTo {
-  color: var(--accent-purple);
+  color: var(--accent-blue);
 }
 
 .routePartyName {
@@ -223,7 +224,7 @@
 
 .packagesSectionLabel {
   font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -242,7 +243,7 @@
   align-items: center;
   padding: var(--space-2) var(--space-3);
   border-radius: var(--radius-md);
-  background: var(--bg-secondary);
+  background: #fafafa;
   border: 1px solid var(--border-primary);
   font-size: var(--fs-base);
 }
@@ -254,14 +255,14 @@
   width: 20px;
   height: 20px;
   border-radius: var(--radius-sm);
-  background: var(--accent-blue-subtle);
-  color: var(--accent-blue);
+  background: var(--accent-blue);
+  color: #ffffff;
   font-size: var(--fs-xs);
   font-weight: var(--fw-bold);
 }
 
 .packageRowName {
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
   color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
@@ -305,14 +306,14 @@
   gap: 2px;
   padding: var(--space-3);
   border-radius: var(--radius-md);
-  background: var(--bg-secondary);
+  background: #fafafa;
   border: 1px solid var(--border-primary);
   text-align: center;
 }
 
 .totalLabel {
   font-size: var(--fs-xs);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
   color: var(--text-tertiary);
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -362,13 +363,13 @@
 .badgeFragile {
   background: var(--accent-amber-subtle);
   color: var(--accent-amber);
-  border: 1px solid rgba(251, 191, 36, 0.2);
+  border: 1px solid rgba(230, 126, 34, 0.2);
 }
 
 .badgeInsured {
   background: var(--accent-green-subtle);
   color: var(--accent-green);
-  border: 1px solid rgba(34, 197, 94, 0.2);
+  border: 1px solid rgba(46, 204, 113, 0.2);
 }
 
 /* ─── Divider ─── */

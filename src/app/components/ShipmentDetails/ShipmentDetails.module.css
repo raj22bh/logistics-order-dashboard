@@ -24,7 +24,7 @@
 
 .title {
   font-size: var(--fs-lg);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   color: var(--text-primary);
 }
 
@@ -89,20 +89,20 @@
 }
 
 .toggleOptionActive {
-  background: var(--accent-blue-subtle);
-  color: var(--accent-blue);
+  background: var(--accent-blue);
+  color: #ffffff;
 }
 
 .toggleOptionExpress {
-  background: var(--accent-orange-subtle);
-  color: var(--accent-orange);
+  background: #1a1a1a;
+  color: #ffffff;
 }
 
 /* Delivery type label */
 .deliveryLabel {
   font-size: var(--fs-sm);
-  font-weight: var(--fw-medium);
-  color: var(--text-secondary);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: var(--space-1);

@@ -10,12 +10,11 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--space-3) var(--space-6);
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-primary);
+  background: #1a1a1a;
+  border-bottom: 1px solid #2a2a2a;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(12px);
 }
 
 .brand {
@@ -31,20 +30,20 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+  background: var(--accent-blue);
   font-size: var(--fs-lg);
 }
 
 .brandName {
   font-size: var(--fs-lg);
   font-weight: var(--fw-bold);
-  color: var(--text-primary);
+  color: #ffffff;
   letter-spacing: -0.02em;
 }
 
 .brandTag {
   font-size: var(--fs-sm);
-  color: var(--text-tertiary);
+  color: #a3a3a3;
   font-weight: var(--fw-normal);
 }
 
@@ -72,11 +71,13 @@
   background: var(--bg-card);
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-xl);
-  transition: border-color var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .formSection:hover {
   border-color: var(--border-secondary);
+  box-shadow: var(--shadow-md);
 }
 
 /* ─── Preview Panel ─── */

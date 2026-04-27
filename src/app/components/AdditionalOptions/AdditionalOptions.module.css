@@ -17,14 +17,14 @@
   width: 32px;
   height: 32px;
   border-radius: var(--radius-md);
-  background: var(--accent-green-subtle);
-  color: var(--accent-green);
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
   font-size: var(--fs-lg);
 }
 
 .title {
   font-size: var(--fs-lg);
-  font-weight: var(--fw-semibold);
+  font-weight: var(--fw-bold);
   color: var(--text-primary);
 }
 
@@ -41,7 +41,7 @@
   padding: var(--space-3) var(--space-4);
   border: 1px solid var(--border-primary);
   border-radius: var(--radius-lg);
-  background: var(--bg-secondary);
+  background: var(--bg-card);
   cursor: pointer;
   transition: all var(--transition-fast);
   user-select: none;
@@ -49,7 +49,7 @@
 
 .option:hover {
   border-color: var(--border-secondary);
-  background: var(--bg-card);
+  box-shadow: var(--shadow-sm);
 }
 
 .optionActive {
@@ -129,7 +129,7 @@
 
 .optionLabel {
   font-size: var(--fs-md);
-  font-weight: var(--fw-medium);
+  font-weight: var(--fw-semibold);
   color: var(--text-primary);
 }
 
