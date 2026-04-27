@@ -1,0 +1,409 @@
+.preview {
+  position: sticky;
+  top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-6);
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  max-height: calc(100vh - var(--space-12));
+  overflow-y: auto;
+}
+
+.previewHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.previewTitle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.previewIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+  color: white;
+  font-size: var(--fs-lg);
+}
+
+.previewTitleText {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.liveIndicator {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-full);
+  background: var(--accent-green-subtle);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  color: var(--accent-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.liveDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-green);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ─── Order Info ─── */
+.orderInfo {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.orderInfoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.orderInfoLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.orderInfoValue {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.deliveryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.badgeStandard {
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+}
+
+.badgeExpress {
+  background: var(--accent-orange-subtle);
+  color: var(--accent-orange);
+}
+
+/* ─── Route Section (Sender → Receiver) ─── */
+.routeSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.routeLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.route {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-3);
+}
+
+.routeParty {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+}
+
+.routePartyLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.routePartyLabelFrom {
+  color: var(--accent-teal);
+}
+
+.routePartyLabelTo {
+  color: var(--accent-purple);
+}
+
+.routePartyName {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.routePartyAddress {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.routePartyEmpty {
+  font-size: var(--fs-sm);
+  color: var(--text-tertiary);
+  font-style: italic;
+}
+
+.routeArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-tertiary);
+  font-size: var(--fs-lg);
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.routeArrowLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.arrowDots {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.arrowDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--text-tertiary);
+}
+
+/* ─── Packages List ─── */
+.packagesSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.packagesSectionLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.packagesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.packageRow {
+  display: grid;
+  grid-template-columns: 24px 1fr auto;
+  gap: var(--space-2);
+  align-items: center;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  font-size: var(--fs-base);
+}
+
+.packageRowNum {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-bold);
+}
+
+.packageRowName {
+  font-weight: var(--fw-medium);
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.packageRowDetails {
+  display: flex;
+  gap: var(--space-3);
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.packageRowDetail {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.emptyPackages {
+  padding: var(--space-4);
+  text-align: center;
+  font-size: var(--fs-sm);
+  color: var(--text-tertiary);
+  font-style: italic;
+  border: 1px dashed var(--border-primary);
+  border-radius: var(--radius-md);
+}
+
+/* ─── Totals ─── */
+.totals {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.totalCard {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  text-align: center;
+}
+
+.totalLabel {
+  font-size: var(--fs-xs);
+  font-weight: var(--fw-medium);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.totalValue {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+}
+
+.totalUnit {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-normal);
+  color: var(--text-secondary);
+}
+
+/* ─── Status Badges ─── */
+.badges {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-semibold);
+  animation: badgeIn var(--transition-base) ease;
+}
+
+@keyframes badgeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.badgeFragile {
+  background: var(--accent-amber-subtle);
+  color: var(--accent-amber);
+  border: 1px solid rgba(251, 191, 36, 0.2);
+}
+
+.badgeInsured {
+  background: var(--accent-green-subtle);
+  color: var(--accent-green);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+/* ─── Divider ─── */
+.divider {
+  height: 1px;
+  background: var(--border-primary);
+}
+
+@media (max-width: 1023px) {
+  .preview {
+    position: static;
+    max-height: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .totals {
+    grid-template-columns: 1fr;
+  }
+
+  .route {
+    flex-direction: column;
+  }
+
+  .routeArrow {
+    transform: rotate(90deg);
+    width: 100%;
+    height: 32px;
+  }
+
+  .packageRowDetails {
+    display: none;
+  }
+
+  .packageRow {
+    grid-template-columns: 24px 1fr;
+  }
+}

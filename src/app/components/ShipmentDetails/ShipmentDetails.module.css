@@ -1,0 +1,116 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+  font-size: var(--fs-lg);
+}
+
+.title {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.orderIdField {
+  position: relative;
+}
+
+.copyButton {
+  position: absolute;
+  right: var(--space-1);
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  color: var(--text-tertiary);
+  transition: color var(--transition-fast), background var(--transition-fast);
+  font-size: var(--fs-sm);
+}
+
+.copyButton:hover {
+  color: var(--accent-blue);
+  background: var(--accent-blue-subtle);
+}
+
+.copied {
+  color: var(--accent-green);
+}
+
+/* Delivery type toggle */
+.deliveryToggle {
+  display: flex;
+  background: var(--bg-input);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.toggleOption {
+  flex: 1;
+  padding: var(--space-2) var(--space-3);
+  text-align: center;
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
+  border: none;
+  cursor: pointer;
+}
+
+.toggleOption:first-child {
+  border-right: 1px solid var(--border-primary);
+}
+
+.toggleOptionActive {
+  background: var(--accent-blue-subtle);
+  color: var(--accent-blue);
+}
+
+.toggleOptionExpress {
+  background: var(--accent-orange-subtle);
+  color: var(--accent-orange);
+}
+
+/* Delivery type label */
+.deliveryLabel {
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-1);
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .fields {
+    grid-template-columns: 1fr;
+  }
+}

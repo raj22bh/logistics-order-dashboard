@@ -1,142 +1,122 @@
 .page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
+  min-height: 100vh;
   display: flex;
-  flex: 1;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
 }
 
-.main {
+/* ─── Top Bar ─── */
+.topBar {
   display: flex;
-  flex: 1;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+  padding: var(--space-3) var(--space-6);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
 }
 
-.intro {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+  font-size: var(--fs-lg);
+}
+
+.brandName {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.brandTag {
+  font-size: var(--fs-sm);
+  color: var(--text-tertiary);
+  font-weight: var(--fw-normal);
+}
+
+/* ─── Main Layout ─── */
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: var(--space-6);
+  padding: var(--space-6);
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ─── Form Panel ─── */
+.formPanel {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+  gap: var(--space-6);
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.formSection {
+  padding: var(--space-5);
+  background: var(--bg-card);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-xl);
+  transition: border-color var(--transition-fast);
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.formSection:hover {
+  border-color: var(--border-secondary);
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+/* ─── Preview Panel ─── */
+.previewPanel {
+  /* The ShipmentPreview component handles its own sticky positioning */
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
-}
-
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
-}
-
-a.secondary {
-  border-color: var(--button-secondary-border);
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-}
-
-@media (max-width: 600px) {
+/* ─── Responsive ─── */
+@media (max-width: 1200px) {
   .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
+    grid-template-columns: 1fr 380px;
+    gap: var(--space-5);
+    padding: var(--space-5);
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
+@media (max-width: 1023px) {
+  .main {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-4);
   }
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+  .topBar {
+    padding: var(--space-3) var(--space-4);
+  }
+}
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
+@media (max-width: 640px) {
+  .main {
+    padding: var(--space-3);
+    gap: var(--space-4);
+  }
 
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
+  .formSection {
+    padding: var(--space-4);
+    border-radius: var(--radius-lg);
+  }
+
+  .topBar {
+    padding: var(--space-2) var(--space-3);
   }
 }
