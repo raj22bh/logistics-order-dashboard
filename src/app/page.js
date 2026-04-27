@@ -76,8 +76,11 @@ export default function HomePage() {
     insurance: false,
   });
 
-  // ── Initialization ──
+  // ── Handlers ──
+  const [hasMounted, setHasMounted] = useState(false);
+
   useEffect(() => {
+    setHasMounted(true);
     setShipmentDetails(prev => ({
       ...prev,
       orderId: generateOrderId(),
@@ -86,7 +89,6 @@ export default function HomePage() {
     setPackages([createEmptyPackage()]);
   }, []);
 
-  // ── Handlers ──
   const handleShipmentChange = useCallback((field, value) => {
     setShipmentDetails((prev) => ({ ...prev, [field]: value }));
   }, []);
@@ -131,6 +133,10 @@ export default function HomePage() {
     }),
     [shipmentDetails, consignor, consignee, packages, options]
   );
+
+  if (!hasMounted) {
+    return <div style={{ minHeight: '100vh', background: 'var(--bg-primary)' }} />;
+  }
 
   return (
     <div className={styles.page}>
